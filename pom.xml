@@ -14,7 +14,7 @@
     </parent>
     <groupId>com.mills</groupId>
     <artifactId>rachel-pet-clinic</artifactId>
-    <version>0.0.2</version>
+    <version>0.0.3-SNAPSHOT</version>
     <name>rachel-pet-clinic</name>
     <description>Pet clinic</description>
 
@@ -40,7 +40,7 @@
     </build>
     <scm>
         <developerConnection>scm:git:https://github.com/rachelmills/rachel-pet-clinic.git</developerConnection>
-      <tag>rachel-pet-clinic-0.0.2</tag>
+      <tag>HEAD</tag>
   </scm>
 
 </project>
