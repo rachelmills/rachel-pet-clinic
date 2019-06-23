@@ -3,7 +3,7 @@ package com.mills.rachelpetclinic.model;
 /**
  * Created by rachelmills on 23/6/19.
  */
-public class PetType {
+public class PetType extends BaseEntity {
 
     private String name;
 
