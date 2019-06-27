@@ -1,14 +1,16 @@
 package com.mills.rachelpetclinic.services.map;
 
 import com.mills.rachelpetclinic.model.Owner;
-import com.mills.rachelpetclinic.services.CrudService;
+import com.mills.rachelpetclinic.services.OwnerService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 /**
  * Created by rachelmills on 23/6/19.
  */
-public class OwnerMapService extends AbstractMapService<Owner, Long> implements CrudService<Owner, Long>{
+@Service
+public class OwnerMapService extends AbstractMapService<Owner, Long> implements OwnerService {
     @Override
     public Set<Owner> findAll() {
         return super.findAll();
@@ -32,5 +34,10 @@ public class OwnerMapService extends AbstractMapService<Owner, Long> implements 
     @Override
     public void deleteById(Long id) {
         super.deleteById(id);
+    }
+
+    @Override
+    public Owner findByLastName(String lastName) {
+        return null;
     }
 }
