@@ -1,6 +1,7 @@
 package com.mills.rachelpetclinic.bootstrap;
 
 import com.mills.rachelpetclinic.model.Owner;
+import com.mills.rachelpetclinic.model.Pet;
 import com.mills.rachelpetclinic.model.PetType;
 import com.mills.rachelpetclinic.model.Vet;
 import com.mills.rachelpetclinic.services.OwnerService;
@@ -8,6 +9,9 @@ import com.mills.rachelpetclinic.services.PetTypeService;
 import com.mills.rachelpetclinic.services.VetService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
+
+import java.time.LocalDate;
+import java.time.Month;
 
 /**
  * Created by rachelmills on 26/6/19.
@@ -39,11 +43,33 @@ public class DataLoader implements CommandLineRunner {
         Owner owner1 = new Owner();
         owner1.setFirstName("Rachel");
         owner1.setLastName("Mills");
+        owner1.setAddress("139/555 Princes Highway");
+        owner1.setCity("Rockdale");
+        owner1.setTelephone("0430581441");
+
+        Pet rachelsPet = new Pet();
+        rachelsPet.setPetType(savedCatPetType);
+        rachelsPet.setOwner(owner1);
+        rachelsPet.setBirthDate(LocalDate.of(2001, Month.NOVEMBER, 5));
+        rachelsPet.setName("Prettiest Puss");
+        owner1.getPets().add(rachelsPet);
+
         ownerService.save(owner1);
 
         Owner owner2 = new Owner();
         owner2.setFirstName("Edward");
         owner2.setLastName("Sonzay");
+        owner2.setAddress("139/555 Princes Highway");
+        owner2.setCity("Rockdale");
+        owner2.setTelephone("0467501606");
+
+        Pet edsPet = new Pet();
+        edsPet.setPetType(savedCatPetType);
+        edsPet.setOwner(owner2);
+        edsPet.setBirthDate(LocalDate.of(2001, Month.NOVEMBER, 5));
+        edsPet.setName("Best Puss");
+        owner2.getPets().add(edsPet);
+
         ownerService.save(owner2);
 
         System.out.println("Loaded owners ....");
