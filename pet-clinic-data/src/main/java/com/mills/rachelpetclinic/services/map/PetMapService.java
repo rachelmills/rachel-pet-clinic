@@ -1,6 +1,6 @@
 package com.mills.rachelpetclinic.services.map;
 
-import com.mills.rachelpetclinic.model.Person;
+import com.mills.rachelpetclinic.model.Pet;
 import com.mills.rachelpetclinic.services.CrudService;
 import org.springframework.stereotype.Service;
 
@@ -10,25 +10,25 @@ import java.util.Set;
  * Created by rachelmills on 23/6/19.
  */
 @Service
-public class PersonMapService extends AbstractMapService<Person, Long> implements CrudService<Person, Long>{
+public class PetMapService extends AbstractMapService<Pet, Long> implements CrudService<Pet, Long>{
     @Override
-    public Set<Person> findAll() {
+    public Set<Pet> findAll() {
         return super.findAll();
     }
 
     @Override
-    public Person findById(Long id) {
+    public Pet findById(Long id) {
         return super.findById(id);
     }
 
     @Override
-    public Person save(Person person) {
-        return super.save(person);
+    public Pet save(Pet pet) {
+        return super.save(pet);
     }
 
     @Override
-    public void delete(Person person) {
-        super.delete(person);
+    public void delete(Pet pet) {
+        super.delete(pet);
     }
 
     @Override
