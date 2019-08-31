@@ -20,14 +20,14 @@ public class OwnerSpringDataJpaService implements OwnerService{
 
     private final OwnerRepository ownerRepository;
     private final PetRepository petRepository;
+    private final PetTypeRepository petTypeRepository;
+
 
     public OwnerSpringDataJpaService(OwnerRepository ownerRepository, PetRepository petRepository, PetTypeRepository petTypeRepository) {
         this.ownerRepository = ownerRepository;
         this.petRepository = petRepository;
         this.petTypeRepository = petTypeRepository;
     }
-
-    private final PetTypeRepository petTypeRepository;
 
     @Override
     public Set<Owner> findAll() {
